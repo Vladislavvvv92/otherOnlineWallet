@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#canvasLines{
+    border: 1px solid black;
+    /* width: 100%;
+    height: 100px; */
+    /* background: blue; */
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* outline: 5px solid lime; */
+}
