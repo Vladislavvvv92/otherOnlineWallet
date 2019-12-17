@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Online Wallet</title>
+    <meta name="description" content="#">
+    <!--<meta name="robots" content="all">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="#">
+    <link rel="shortcut icon" href="public/loginPage/img/favicon.ico" type="image/png">
+    <link rel="canonical" href="online-wallet.hostenko.com">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="dist/main.css">
+
+</head>
+<body>
+<!------------------------------------- Modals ------------------------------------->
+<div class="dark-pop dark-pop--mobile" id="darkPop">
+    <div class="dark-pop__modals modals " id="modals">
+
+        <!------------------------------------- Mobile Modal ------------------------------------->
+        <div class="modals__mobile-load mobile-load">
+            <div class="mobile-load__close-btn close-btn">
+                <!--<img class="close-btn__img" src="public/loginPage/img/close.svg" alt="close button" id="mobCloseBtn">-->
+                <img class="close-btn__img" src="public/loginPage/img/close.svg" alt="close button" id="mobCloseBtn">
+            </div>
+            <p class="mobile-load__title">For login you have to download the mobile app and be registered in.</p>
+            <div class="mobile-load__btn btn">
+                <a href="#" class="btn__app-store app-store">
+                    <img class="app-store__img" src="public/loginPage/img/AppStore.svg" alt="app store button">
+                </a>
+                <a href="#" class="btn__google-play google-play">
+                    <img class="google-play__img" src="public/loginPage/img/GooglePlay.svg" alt="google play button">
+                </a>
+            </div>
+        </div>
+
+        <!------------------------------------- Qr Cods ------------------------------------->
+        <div class="modals__qr-cods qr-cods doNotClose" id="qrCods">
+            <img class="qr-cods__close doNotClose" src="public/loginPage/img/close.svg" alt="close" id="qrCodsClose">
+            <div class="qr-cods__img img doNotClose">
+                <img class="img__google-play doNotClose" id="googlePayQr" src="public/loginPage/img/qr-android.svg" alt="google play button">
+                <img class="img__app-store doNotClose" id="appStoreQr" src="public/loginPage/img/qr-ios.svg" alt="app store button" >
+            </div>
+            <span class="qr-cods__text translate doNotClose" id="googlePlayText" key="googlePlayQr">Scan the QR code to go to </br> Play Market</span>
+            <span class="qr-cods__text translate doNotClose" id="appStoreText" key="appSotreQr">Scan the QR code to go to </br> App Store</span>
+        </div>
+
+        <!------------------------------------- Verification modal ------------------------------------->
+        <div class="modals__verification verification" id="verificationModal">
+            <span class="verification__bigtext translate" key="verificationTitle">Enter verification code</span>
+            <span class="verification__smalltext translate" key="verificationText">Please enter the 6 digit code we just sent to your number +XXXXXXXX653</span>
+            <div class="verification__code code">
+                <span class="code__text translate" key="verificationCode">Code</span>
+                <div class="code form__wrap">
+                    <form class="form__wrap wrap" id="verificationForm" name="verificationForm">
+                        <input class="wrap__field" type="text" name="verification" autocomplete="off" id="verificationInput" value="123456">
+                    </form>
+                </div>
+            </div>
+            <button class="verification__btn translate" key="submitVerification" id="verificationBtn">SUBMIT</button>
+        </div>
+
+        <!------------------------------------- Invalid modal ------------------------------------->
+        <div class="modal__invalid-order invalid-order" id="invalidModal">
+            <div class="invalid-order__error error">
+                <img class="error__img" src="public/loginPage/img/error_popup.svg" alt="error">
+            </div>
+            <span class="invalid-order__big-text" id="errorBigText"><!--Invalid order quanity--></span>
+            <span class="invalid-order__small-text" id="errorSmallText"><!--0.017641 quantity less than minimum</br> allowed 0.35--></span>
+            <button class="invalid-order__btn" id="invalidModalBtn">Ok, I got It!</button>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="container" id="container">
+
+    <!------------------------------------- Header ------------------------------------->
+    <div class="container__header header" id="header">
+        <div class="header__logo logo">
+            <img class="logo__img" src="public/loginPage/img/tag.svg" alt="logo">
+            <h1 class="logo__text translate" key="logo">Online Wallet</h1>
+        </div>
+        <div class="header__language-switcher language-switcher">
+            <button class="language-switcher__current-language" id="languageSwitcher">
+                English
+            </button>
+            <img class="language-switcher__chevron" id="arrow" src="public/loginPage/img/chevron-down.svg" alt="current language chevron">
+            <ul class="language-switcher__all-languages all-languages" id="allLanguages">
+                <li class="all-languages__language" id="GE">Deutsch - German</li>
+                <li class="all-languages__language" id="PO">polski - Polish</li>
+                <li class="all-languages__language language-switcher__all-languages--selected" id="EN">English</li>
+                <li class="all-languages__language" id="RU">русский - Russian</li>
+                <li class="all-languages__language" id="AR">ةيبرعلا - Arabic</li>
+                <li class="all-languages__language" id="SP">español - Spanish</li>
+                <li class="all-languages__language" id="IT">italiano - Italian</li>
+            </ul>
+        </div>
+    </div>
+
+    <!------------------------------------- Main ------------------------------------->
+    <div class="container__main main" id="main">
+
+        <!-------------------------------------InfoSide------------------------------------->
+        <div class="main__info-side info-side">
+            <div class="info-side__info info">
+
+                <div class="info__logo logo">
+                    <img class="logo__img" src="public/loginPage/img/tag.svg" alt="Logo">
+                    <h1 class="logo__text translate" key="logo" >Online Wallet</h1>
+                </div>
+
+                <div class="info__text text">
+                    <p class="text__title translate" key="forInput">For login you have to download the mobile app and be registered in.</p>
+                    <p class="text__sup translate" key="alreadyRegistered">If you have already registered please enter your data and click Log in button.</p>
+                </div>
+
+                <div class="info__load-app load-app">
+                    <div class="load-app__google-pay google-pay">
+                        <a href="#" class="google-pay__btn btn">
+                            <img class="btn__img" src="public/loginPage/img/GooglePlay.svg" alt="">
+                        </a>
+                        <p class="google-pay__qr-code qr-code translate" id="showGooglePlay" key="showQr">Show QR-code</p>
+                    </div>
+
+                    <div class="load-app__app-store app-store">
+                        <a href="#" class="app-store__btn btn">
+                            <img src="public/loginPage/img/AppStore.svg" alt="" class="btn__img" >
+                        </a>
+                        <p class="app-store__qr-code qr-code translate" id="showAppStore" key="showQr">Show QR-code</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-------------------------------------LoginSide------------------------------------->
+        <div class="main__login-side login-side" id="login-side">
+            <!------------------------------------- Login Form ------------------------------------->
+            <div class="login-side__login-form login-form">
+                <!------------------------------------- Login Form Errors ------------------------------------->
+                <div class="login-form__login-error login-error login-form__login-error--1" id="error1">
+                    <span class="login-error__icon"></span>
+                    <p class="login-error__text translate" key="error1">The login, device name or password is not correct.</p>
+                </div>
+
+                <div class="login-form__login-error login-error login-form__login-error--2 " id="error2">
+                    <span class="login-error__icon"></span>
+                    <p class="login-error__text translate" key="error2">The login or device name you've entered doesn't match any account.</p>
+                </div>
+
+                <!------------------------------------- Form ------------------------------------->
+                <form class="login-form__form form" id="form" name="form">
+
+                    <h3 class="form__title translate" key="loginTitle">Log In</h3>
+
+                    <div class="form__row row">
+                        <p class="row__label translate" key="loginInput">Login</p>
+                        <input class="row__input input" name="login" type="text" id="login" autocomplete="off" value="Ivan">
+                    </div>
+
+                    <div class="form__row row">
+                        <p class="row__label translate" key="deviceName">Device Name</p>
+                        <input class="row__input input" name="device-name" type="text" id="deviceName" autocomplete="off" value="Ivanov">
+                    </div>
+
+                    <div class="form__row row">
+                        <p class="row__label translate" key="password">Password</p>
+                        <div class="row__pass pass">
+                            <input class="pass__input input" name="password" type="Password" id="pass" autocomplete="off" value="123321">
+                            <span class="pass__view-pass pass__view-pass--off" id="viewPassOff"></span>
+                            <span class="pass__view-pass pass__view-pass--on" id="viewPassOn"></span>
+                        </div>
+                    </div>
+
+                    <div class="form__row row">
+                        <button class="row__submit-button translate" type="submit" id="submit" key="submitButton">log in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="dist/main.js"></script>
+</body>
+
+</html>

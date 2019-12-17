@@ -1,0 +1,44 @@
+
+@media (max-width: 1020px) {
+  html{
+    background: @main-bg;
+  }
+  div.header__logo{
+    padding:24px 0 0 50px;
+    display: flex;
+  }
+  div.container{
+    //width: 100vw;
+    .main{
+      flex-direction: column-reverse;
+      .info-side{
+        width: 100%;
+        margin:20px 0;
+      }
+    }
+  }
+  div.container{
+    .main{
+      display: flex;
+      .login-side{
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
+  .info-side{
+    .info__logo{
+      display: none;
+    }
+    .info{
+      margin:0 auto;
+    }
+  }
+  .login-form{
+    margin: 0 auto;
+  }
+  .language-switcher{
+    display: block;
+    margin: 25px auto;
+  }
+}

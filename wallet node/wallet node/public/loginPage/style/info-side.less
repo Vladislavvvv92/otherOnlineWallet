@@ -1,0 +1,76 @@
+@import "variables";
+.info-side{
+  .info{
+    width: 380px;
+    margin-top: 38px;
+    margin-left: 108px;
+
+    &__logo{
+      margin-bottom: 92px;
+      height: 40px;
+      display: flex;
+      .logo__img{
+        width: 40px;
+        height: 40px;
+      }
+      .logo__text{
+        margin: auto auto auto 15px;
+        color: @white-color;
+        font-size: 24px;
+        line-height: 150%;
+        font-family: 'Roboto', sans-serif;
+      }
+    }
+    .text__title{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 150%;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+    }
+    .text__sup{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: #D3DBE0;
+    }
+    .load-app{
+      display: flex;
+      margin-top: 40px;
+      .btn:active{
+        border: 1px solid @main-bg;
+      }
+      &__google-pay{
+        width: 120px;
+        height: 35px;
+        text-align: center;
+    /*    margin-right: 40px;*/
+      }
+      &__app-store{
+        width: 120px;
+        height: 35px;
+        text-align: center;
+        margin-left: 40px;
+      }
+      .qr-code{
+        color: #D3DBE0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 150%;
+        cursor: pointer;
+        margin-top: 13px;
+          &:after{
+            content: "";
+            display: block;
+            width: 75%;
+            border: 1px dashed #D3DBE0;
+            margin: 2px 5px 0 15px;
+          }
+      }
+
+    }
+  }
+
+}

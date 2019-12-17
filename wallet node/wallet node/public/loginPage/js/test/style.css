@@ -1,0 +1,15 @@
+.start{
+    box-sizing: border-box;
+    width: 300px;
+    height: 75px;
+    margin: 50px auto auto 50px;
+    font-size: 25px;
+    background: rgba(147,206,222,1);
+    border-radius: 5px;
+    border: none;
+    color: rgba(98,125,77,1);
+    outline: none;
+}
+.start:active{
+    border: 1px solid #fff;
+}

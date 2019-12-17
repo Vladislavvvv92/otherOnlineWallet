@@ -1,0 +1,26 @@
+export default {
+    qrCods : document.getElementById('qrCods'),
+<<<<<<< HEAD
+    appStoreText : document.getElementById('appStoreText'),
+    qrCodsCloseBtn : document.getElementById('qrCodsClose'),
+    googlePlayText : document.getElementById('googlePlayText'),
+    showAppStoreBtn : document.getElementById('showAppStore'),
+    popUpBackground : document.getElementById('darkPop'),
+    qrCodAppStoreImg : document.getElementById('appStoreQr'),
+    showGooglePlayBtn : document.getElementById('showGooglePlay'),
+    qrCodGooglePlayImg : document.getElementById('googlePayQr'),
+}
+=======
+    popUpBackground : document.getElementById('darkPop'),
+
+    googlePlayText : document.getElementById('googlePlayText'),
+    showGooglePlayBtn : document.getElementById('showGooglePlay'),
+    qrCodGooglePlayImg : document.getElementById('googlePayQr'),
+
+    appStoreText : document.getElementById('appStoreText'),
+    showAppStoreBtn : document.getElementById('showAppStore'),
+    qrCodAppStoreImg : document.getElementById('appStoreQr'),
+
+    qrCodsCloseBtn : document.getElementById('qrCodsClose'),
+};
+>>>>>>> 2a5af61db018db6317e518bf9ce7cab5cf3933a8

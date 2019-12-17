@@ -1,0 +1,57 @@
+@import "login-form.less";
+@import "info-side.less";
+@import "variables";
+@import "popup";
+@import "laguage-switcher";
+@import "media-queries";
+@import "dashboard-layout";
+@import "images";
+*{
+  //background: @img-1;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  position: relative;
+  background: @main-bg;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .header{
+    display: flex;
+    height: 74px;
+  }
+  .main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    max-width: 1366px;
+    margin: 0px auto;
+    .info-side{
+      width: 50%;
+    }
+    .login-side{
+      width: 50%;
+    }
+  }
+}
+
+.header__logo{
+  padding:24px 0 0 50px;
+  display: none;
+  align-items: center;
+  .logo__img{
+    width: 40px;
+    height: 40px;
+  }
+  .logo__text{
+    color: @white-color;
+    margin-left: 15px;
+    font-size: 24px;
+  }
+}
+
+

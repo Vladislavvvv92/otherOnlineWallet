@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+import {initQrCods} from './qr-cods/controller';
+import {initMobileModal} from  './mobile-modal/controller';
+import {initTranslation} from './translation/controller';
+import {initLanguageSwitcher} from './language-switcher/controller';
+=======
+import {initTranslation} from './translation/controller'
+import {initLanguageSwitcher} from './language-switcher/controller'
+import {initLoginForm} from './login-form/initLoginForm'
+>>>>>>> 2a5af61db018db6317e518bf9ce7cab5cf3933a8
+
+    document.addEventListener('DOMContentLoaded', init);
+
+function init() {
+    initQrCods();
+    initLoginForm();
+    initTranslation();
+    initMobileModal();
+    initLanguageSwitcher();
+}
